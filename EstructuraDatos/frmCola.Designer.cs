@@ -34,23 +34,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTramiteA = new System.Windows.Forms.TextBox();
-            this.txtNombreA = new System.Windows.Forms.TextBox();
-            this.txtCodigoA = new System.Windows.Forms.TextBox();
+            this.txtTramite = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvCola = new System.Windows.Forms.DataGridView();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trámite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstCola = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtTramiteE = new System.Windows.Forms.TextBox();
-            this.txtNombreE = new System.Windows.Forms.TextBox();
-            this.txtCodigoE = new System.Windows.Forms.TextBox();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Trámite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblTramite = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -72,9 +72,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtTramiteA);
-            this.groupBox1.Controls.Add(this.txtNombreA);
-            this.groupBox1.Controls.Add(this.txtCodigoA);
+            this.groupBox1.Controls.Add(this.txtTramite);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Location = new System.Drawing.Point(223, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(205, 181);
@@ -90,6 +90,7 @@
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label3
             // 
@@ -118,26 +119,26 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Código:";
             // 
-            // txtTramiteA
+            // txtTramite
             // 
-            this.txtTramiteA.Location = new System.Drawing.Point(76, 97);
-            this.txtTramiteA.Name = "txtTramiteA";
-            this.txtTramiteA.Size = new System.Drawing.Size(100, 20);
-            this.txtTramiteA.TabIndex = 5;
+            this.txtTramite.Location = new System.Drawing.Point(76, 97);
+            this.txtTramite.Name = "txtTramite";
+            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.TabIndex = 5;
             // 
-            // txtNombreA
+            // txtNombre
             // 
-            this.txtNombreA.Location = new System.Drawing.Point(76, 67);
-            this.txtNombreA.Name = "txtNombreA";
-            this.txtNombreA.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreA.TabIndex = 4;
+            this.txtNombre.Location = new System.Drawing.Point(77, 67);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 4;
             // 
-            // txtCodigoA
+            // txtCodigo
             // 
-            this.txtCodigoA.Location = new System.Drawing.Point(76, 35);
-            this.txtCodigoA.Name = "txtCodigoA";
-            this.txtCodigoA.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigoA.TabIndex = 3;
+            this.txtCodigo.Location = new System.Drawing.Point(76, 35);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -162,6 +163,21 @@
             this.dgvCola.Size = new System.Drawing.Size(398, 186);
             this.dgvCola.TabIndex = 1;
             // 
+            // Código
+            // 
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Trámite
+            // 
+            this.Trámite.HeaderText = "Trámite";
+            this.Trámite.Name = "Trámite";
+            // 
             // lstCola
             // 
             this.lstCola.FormattingEnabled = true;
@@ -172,19 +188,27 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblTramite);
+            this.groupBox3.Controls.Add(this.lblNombre);
+            this.groupBox3.Controls.Add(this.lblCodigo);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btnEliminar);
-            this.groupBox3.Controls.Add(this.txtTramiteE);
-            this.groupBox3.Controls.Add(this.txtNombreE);
-            this.groupBox3.Controls.Add(this.txtCodigoE);
             this.groupBox3.Location = new System.Drawing.Point(434, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(193, 181);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Elemento Eliminado";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigo.Location = new System.Drawing.Point(78, 35);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(95, 20);
+            this.lblCodigo.TabIndex = 21;
             // 
             // label4
             // 
@@ -221,42 +245,23 @@
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtTramiteE
+            // lblNombre
             // 
-            this.txtTramiteE.Location = new System.Drawing.Point(74, 97);
-            this.txtTramiteE.Name = "txtTramiteE";
-            this.txtTramiteE.Size = new System.Drawing.Size(100, 20);
-            this.txtTramiteE.TabIndex = 17;
+            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre.Location = new System.Drawing.Point(78, 67);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(95, 20);
+            this.lblNombre.TabIndex = 22;
             // 
-            // txtNombreE
+            // lblTramite
             // 
-            this.txtNombreE.Location = new System.Drawing.Point(73, 67);
-            this.txtNombreE.Name = "txtNombreE";
-            this.txtNombreE.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreE.TabIndex = 16;
-            // 
-            // txtCodigoE
-            // 
-            this.txtCodigoE.Location = new System.Drawing.Point(73, 35);
-            this.txtCodigoE.Name = "txtCodigoE";
-            this.txtCodigoE.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigoE.TabIndex = 15;
-            // 
-            // Código
-            // 
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Trámite
-            // 
-            this.Trámite.HeaderText = "Trámite";
-            this.Trámite.Name = "Trámite";
+            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramite.Location = new System.Drawing.Point(78, 97);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(95, 20);
+            this.lblTramite.TabIndex = 23;
             // 
             // frmCola
             // 
@@ -287,23 +292,23 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTramiteA;
-        private System.Windows.Forms.TextBox txtNombreA;
-        private System.Windows.Forms.TextBox txtCodigoA;
+        private System.Windows.Forms.TextBox txtTramite;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.ListBox lstCola;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtTramiteE;
-        private System.Windows.Forms.TextBox txtNombreE;
-        private System.Windows.Forms.TextBox txtCodigoE;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Trámite;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblTramite;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

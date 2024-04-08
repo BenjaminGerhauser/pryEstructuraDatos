@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsCola.cs" />
     <Compile Include="clsNodo.cs" />
+    <Compile Include="clsPila.cs" />
     <Compile Include="DatosDesarrolados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,18 @@
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaDoblementeEnlazada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaDoblementeEnlazada.Designer.cs">
+      <DependentUpon>frmListaDoblementeEnlazada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaSimple.Designer.cs">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
@@ -79,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaDoblementeEnlazada.resx">
+      <DependentUpon>frmListaDoblementeEnlazada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaSimple.resx">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>

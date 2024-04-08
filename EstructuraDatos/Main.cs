@@ -29,9 +29,28 @@ namespace EstructuraDatos
             this.Close();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmCola cola = new frmCola();
+            cola.Show();
+        }
 
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila pila = new frmPila();
+            pila.Show();
+        }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple listaSimple = new frmListaSimple();
+            listaSimple.Show();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoblementeEnlazada listaDoble = new frmListaDoblementeEnlazada();
+            listaDoble.Show();
         }
     }
 }

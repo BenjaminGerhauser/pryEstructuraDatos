@@ -44,12 +44,12 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lstCodigo = new System.Windows.Forms.ComboBox();
+            this.cboCodigo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.rbAscendente = new System.Windows.Forms.RadioButton();
             this.rbDescendente = new System.Windows.Forms.RadioButton();
+            this.rbAscendente = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -128,6 +128,7 @@
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label3
             // 
@@ -187,7 +188,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lstCodigo);
+            this.groupBox3.Controls.Add(this.cboCodigo);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btnEliminar);
             this.groupBox3.Location = new System.Drawing.Point(434, 12);
@@ -197,14 +198,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Elemento Eliminado";
             // 
-            // lstCodigo
+            // cboCodigo
             // 
-            this.lstCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lstCodigo.FormattingEnabled = true;
-            this.lstCodigo.Location = new System.Drawing.Point(64, 35);
-            this.lstCodigo.Name = "lstCodigo";
-            this.lstCodigo.Size = new System.Drawing.Size(107, 21);
-            this.lstCodigo.TabIndex = 19;
+            this.cboCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCodigo.FormattingEnabled = true;
+            this.cboCodigo.Location = new System.Drawing.Point(64, 35);
+            this.cboCodigo.Name = "cboCodigo";
+            this.cboCodigo.Size = new System.Drawing.Size(107, 21);
+            this.cboCodigo.TabIndex = 19;
             // 
             // label6
             // 
@@ -223,6 +224,7 @@
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox4
             // 
@@ -235,17 +237,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Listar datos";
             // 
-            // rbAscendente
-            // 
-            this.rbAscendente.AutoSize = true;
-            this.rbAscendente.Location = new System.Drawing.Point(9, 16);
-            this.rbAscendente.Name = "rbAscendente";
-            this.rbAscendente.Size = new System.Drawing.Size(82, 17);
-            this.rbAscendente.TabIndex = 0;
-            this.rbAscendente.TabStop = true;
-            this.rbAscendente.Text = "Ascendente";
-            this.rbAscendente.UseVisualStyleBackColor = true;
-            // 
             // rbDescendente
             // 
             this.rbDescendente.AutoSize = true;
@@ -256,6 +247,19 @@
             this.rbDescendente.TabStop = true;
             this.rbDescendente.Text = "Descendente";
             this.rbDescendente.UseVisualStyleBackColor = true;
+            this.rbDescendente.CheckedChanged += new System.EventHandler(this.rbDescendente_CheckedChanged);
+            // 
+            // rbAscendente
+            // 
+            this.rbAscendente.AutoSize = true;
+            this.rbAscendente.Location = new System.Drawing.Point(9, 16);
+            this.rbAscendente.Name = "rbAscendente";
+            this.rbAscendente.Size = new System.Drawing.Size(82, 17);
+            this.rbAscendente.TabIndex = 0;
+            this.rbAscendente.TabStop = true;
+            this.rbAscendente.Text = "Ascendente";
+            this.rbAscendente.UseVisualStyleBackColor = true;
+            this.rbAscendente.CheckedChanged += new System.EventHandler(this.rbAscendente_CheckedChanged);
             // 
             // frmListaDoblementeEnlazada
             // 
@@ -301,7 +305,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.PictureBox pictureBoxImagen;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox lstCodigo;
+        private System.Windows.Forms.ComboBox cboCodigo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox groupBox4;

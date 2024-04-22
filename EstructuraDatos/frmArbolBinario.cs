@@ -25,13 +25,19 @@ namespace EstructuraDatos
             Nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
             Arbol.Agregar(Nuevo);
             Arbol.Recorrer(dgvLista);
-            Arbol.Recorrer(cboCodigo);
-            Arbol.Recorrer(treeView1);
+            //Arbol.Recorrer(cboCodigo);
+            //Arbol.Recorrer(treeView1);
         }
 
         private void rbInOrden_CheckedChanged(object sender, EventArgs e)
         {
-            Arbol.Recorrer(dgvLista);
+            //Arbol.Recorrer(dgvLista);
+        }
+
+        private void rbPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerPre(dgvLista);
+            Arbol.RecorrerPre(treeView1);
         }
     }
 }

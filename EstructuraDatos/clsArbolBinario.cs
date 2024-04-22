@@ -26,8 +26,8 @@ namespace EstructuraDatos
             }
             else
             {
-                clsNodo Aux = Raiz;
                 clsNodo Padre = Raiz;
+                clsNodo Aux = Raiz;
                 while (Aux != null)
                 {
                     Padre = Aux;
@@ -83,7 +83,7 @@ namespace EstructuraDatos
             Combo.Items.Add(R.Codigo);
             if (R.Derecho != null) InOrdenAsc(Combo, R.Derecho);
         }
-        public void Recorrer(TreeView Tree)
+        public void RecorrerPre(TreeView Tree)
         {
             Tree.Nodes.Clear();
             TreeNode NodoPadre = new TreeNode("Árbol");
@@ -97,6 +97,17 @@ namespace EstructuraDatos
             nodoTreeView.Nodes.Add(nodoPadre);
             if (R.Izquierdo != null) PreOrden(R.Izquierdo, nodoPadre);
             if (R.Derecho != null) PreOrden(R.Derecho, nodoPadre);
+        }
+        public void RecorrerPre(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Raiz,Grilla);
+        }
+        private void PreOrden(clsNodo R, DataGridView Grilla)
+        {
+            Grilla.Rows.Add(R.Codigo,R.Nombre,R.Tramite);
+            if (R.Izquierdo != null) PreOrden(R.Izquierdo, Grilla);
+            if (R.Derecho != null) PreOrden(R.Derecho, Grilla);
         }
     }
 }

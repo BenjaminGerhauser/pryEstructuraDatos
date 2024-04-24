@@ -39,5 +39,19 @@ namespace EstructuraDatos
             Arbol.RecorrerPre(dgvLista);
             Arbol.RecorrerPre(treeView1);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Arbol.Eliminar(Convert.ToInt32(cboCodigo.Text));
+            Arbol.Recorrer(dgvLista);
+
+        }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            Arbol.Equilibrar();
+            Arbol.Recorrer(dgvLista);
+
+        }
     }
 }

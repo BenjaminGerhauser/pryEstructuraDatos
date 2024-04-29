@@ -47,8 +47,8 @@ namespace EstructuraDatos
         }
         public clsNodo Derecho
         {
-            get { return ant; }
-            set { ant = value; }
+            get { return sig; }
+            set { sig = value; }
         }
     }
 }

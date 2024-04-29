@@ -20,8 +20,8 @@ namespace EstructuraDatos
         }
         public void Agregar(clsNodo Nuevo)
         {
-            //Nuevo.Izquierdo = null;
-            //Nuevo.Derecho = null;
+            Nuevo.Izquierdo = null;
+            Nuevo.Derecho = null;
             if (Raiz == null)
             {
                 Raiz = Nuevo;
@@ -35,7 +35,7 @@ namespace EstructuraDatos
                     Padre = Aux;
                     if (Nuevo.Codigo < Aux.Codigo)
                     {
-                        Aux = Aux.Izquierdo;           
+                        Aux = Aux.Izquierdo;
                     }
                     else
                     {
@@ -120,7 +120,7 @@ namespace EstructuraDatos
                 if (cod < Aux.Codigo) Aux = Aux.Izquierdo;
                 else Aux = Aux.Derecho;
             }
-            return Aux;
+            //return Aux;
         }
         public void Equilibrar()
         {

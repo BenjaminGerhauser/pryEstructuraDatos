@@ -31,7 +31,7 @@ namespace EstructuraDatos
 
         private void rbInOrden_CheckedChanged(object sender, EventArgs e)
         {
-            //Arbol.Recorrer(dgvLista);
+            Arbol.Recorrer(dgvLista);
         }
 
         private void rbPreOrden_CheckedChanged(object sender, EventArgs e)
@@ -42,15 +42,15 @@ namespace EstructuraDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Arbol.Eliminar(Convert.ToInt32(cboCodigo.Text));
-            Arbol.Recorrer(dgvLista);
+            //Arbol.Eliminar(Convert.ToInt32(cboCodigo.Text));
+            //Arbol.Recorrer(dgvLista);
 
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
-            Arbol.Equilibrar();
-            Arbol.Recorrer(dgvLista);
+            //Arbol.Equilibrar();
+            //Arbol.Recorrer(dgvLista);
 
         }
     }

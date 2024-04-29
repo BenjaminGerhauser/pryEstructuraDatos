@@ -25,7 +25,7 @@ namespace EstructuraDatos
             Nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
             Arbol.Agregar(Nuevo);
             Arbol.Recorrer(dgvLista);
-            //Arbol.Recorrer(cboCodigo);
+            Arbol.Recorrer(cboCodigo);
             //Arbol.Recorrer(treeView1);
         }
 
@@ -42,16 +42,15 @@ namespace EstructuraDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //Arbol.Eliminar(Convert.ToInt32(cboCodigo.Text));
-            //Arbol.Recorrer(dgvLista);
+            Arbol.Eliminar(Convert.ToInt32(cboCodigo.Text));
+            Arbol.Recorrer(dgvLista);
 
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
-            //Arbol.Equilibrar();
-            //Arbol.Recorrer(dgvLista);
-
+            Arbol.Equilibrar();
+            Arbol.Recorrer(dgvLista);
         }
     }
 }

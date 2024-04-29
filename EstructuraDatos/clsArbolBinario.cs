@@ -111,7 +111,7 @@ namespace EstructuraDatos
             if (R.Izquierdo != null) PreOrden(R.Izquierdo, Grilla);
             if (R.Derecho != null) PreOrden(R.Derecho, Grilla);
         }
-        public void BuscarCodigo(Int32 cod)
+        public clsNodo BuscarCodigo(Int32 cod)
         {
             clsNodo Aux = Raiz;
             while (Aux != null)
@@ -120,7 +120,7 @@ namespace EstructuraDatos
                 if (cod < Aux.Codigo) Aux = Aux.Izquierdo;
                 else Aux = Aux.Derecho;
             }
-            //return Aux;
+            return Aux;
         }
         public void Equilibrar()
         {
@@ -156,7 +156,7 @@ namespace EstructuraDatos
         private void GrabarVectorInOrden(clsNodo NodoPadre,Int32 Codigo)
         {
             if (NodoPadre.Izquierdo != null) GrabarVectorInOrden(NodoPadre.Izquierdo, Codigo);
-            if (NodoPadre.Codigo != Codigo) Vector[i] = NodoPadre;i = i + 1;
+            if (NodoPadre.Codigo != Codigo) { Vector[i] = NodoPadre; i = i + 1; }
             if (NodoPadre.Derecho != null) GrabarVectorInOrden(NodoPadre.Derecho, Codigo);
         }
 

@@ -16,7 +16,7 @@ namespace EstructuraDatos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmArbolBinario());
+            Application.Run(new Main());
         }
     }
 }

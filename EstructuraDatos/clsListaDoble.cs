@@ -135,7 +135,7 @@ namespace EstructuraDatos
         public void RecorrerDes()
         {
             clsNodo aux = Ultimo;
-            StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("Código;Nombre;Trámite");
             while (aux != null)

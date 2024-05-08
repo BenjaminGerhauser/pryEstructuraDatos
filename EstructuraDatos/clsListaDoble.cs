@@ -43,7 +43,7 @@ namespace EstructuraDatos
                     if (Nuevo.Codigo > Ultimo.Codigo)
                     {
                         Ultimo.Siguiente = Nuevo;
-                        Nuevo.Anterior = Nuevo;
+                        Nuevo.Anterior = Ultimo;
                         Ultimo = Nuevo;
                     }
                     else

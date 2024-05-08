@@ -20,18 +20,22 @@ namespace EstructuraDatos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo ObjNodo = new clsNodo();
-            ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            ObjNodo.Nombre = txtNombre.Text;
-            ObjNodo.Tramite = txtTramite.Text;
-            filaDePersonas.Agregar(ObjNodo);
-            filaDePersonas.Recorrer(dgvLista);
-            filaDePersonas.Recorrer(lstLista);
-            filaDePersonas.Recorrer(cboCodigo);
-            filaDePersonas.Recorrer();
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            if (txtCodigo.Text != "")
+            {
+                clsNodo ObjNodo = new clsNodo();
+                ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                ObjNodo.Nombre = txtNombre.Text;
+                ObjNodo.Tramite = txtTramite.Text;
+                filaDePersonas.Agregar(ObjNodo);
+                filaDePersonas.Recorrer(dgvLista);
+                filaDePersonas.Recorrer(lstLista);
+                filaDePersonas.Recorrer(cboCodigo);
+                filaDePersonas.Recorrer();
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+            else MessageBox.Show("Ingrese los datos");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

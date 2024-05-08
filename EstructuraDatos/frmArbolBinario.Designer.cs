@@ -41,20 +41,20 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbInOrdenDesc = new System.Windows.Forms.RadioButton();
             this.rbPostOrden = new System.Windows.Forms.RadioButton();
             this.rbPreOrden = new System.Windows.Forms.RadioButton();
             this.rbInOrden = new System.Windows.Forms.RadioButton();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.Grilla = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Trámite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -173,11 +173,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.rbInOrdenDesc);
             this.groupBox2.Controls.Add(this.rbPostOrden);
             this.groupBox2.Controls.Add(this.rbPreOrden);
             this.groupBox2.Controls.Add(this.rbInOrden);
-            this.groupBox2.Controls.Add(this.dgvLista);
+            this.groupBox2.Controls.Add(this.Grilla);
             this.groupBox2.Location = new System.Drawing.Point(12, 199);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(615, 225);
@@ -185,21 +185,34 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado en una Lista y una Grilla";
             // 
+            // rbInOrdenDesc
+            // 
+            this.rbInOrdenDesc.AutoSize = true;
+            this.rbInOrdenDesc.Location = new System.Drawing.Point(24, 81);
+            this.rbInOrdenDesc.Name = "rbInOrdenDesc";
+            this.rbInOrdenDesc.Size = new System.Drawing.Size(94, 17);
+            this.rbInOrdenDesc.TabIndex = 5;
+            this.rbInOrdenDesc.TabStop = true;
+            this.rbInOrdenDesc.Text = "In-Orden-Desc";
+            this.rbInOrdenDesc.UseVisualStyleBackColor = true;
+            this.rbInOrdenDesc.CheckedChanged += new System.EventHandler(this.rbInOrdenDesc_CheckedChanged);
+            // 
             // rbPostOrden
             // 
             this.rbPostOrden.AutoSize = true;
-            this.rbPostOrden.Location = new System.Drawing.Point(24, 178);
+            this.rbPostOrden.Location = new System.Drawing.Point(24, 170);
             this.rbPostOrden.Name = "rbPostOrden";
             this.rbPostOrden.Size = new System.Drawing.Size(78, 17);
             this.rbPostOrden.TabIndex = 4;
             this.rbPostOrden.TabStop = true;
             this.rbPostOrden.Text = "Post-Orden";
             this.rbPostOrden.UseVisualStyleBackColor = true;
+            this.rbPostOrden.CheckedChanged += new System.EventHandler(this.rbPostOrden_CheckedChanged);
             // 
             // rbPreOrden
             // 
             this.rbPreOrden.AutoSize = true;
-            this.rbPreOrden.Location = new System.Drawing.Point(24, 122);
+            this.rbPreOrden.Location = new System.Drawing.Point(24, 127);
             this.rbPreOrden.Name = "rbPreOrden";
             this.rbPreOrden.Size = new System.Drawing.Size(73, 17);
             this.rbPreOrden.TabIndex = 3;
@@ -211,26 +224,27 @@
             // rbInOrden
             // 
             this.rbInOrden.AutoSize = true;
-            this.rbInOrden.Location = new System.Drawing.Point(24, 33);
+            this.rbInOrden.Checked = true;
+            this.rbInOrden.Location = new System.Drawing.Point(24, 39);
             this.rbInOrden.Name = "rbInOrden";
-            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
+            this.rbInOrden.Size = new System.Drawing.Size(87, 17);
             this.rbInOrden.TabIndex = 2;
             this.rbInOrden.TabStop = true;
-            this.rbInOrden.Text = "In-Orden";
+            this.rbInOrden.Text = "In-Orden-Asc";
             this.rbInOrden.UseVisualStyleBackColor = true;
             this.rbInOrden.CheckedChanged += new System.EventHandler(this.rbInOrden_CheckedChanged);
             // 
-            // dgvLista
+            // Grilla
             // 
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
             this.Nombre,
             this.Trámite});
-            this.dgvLista.Location = new System.Drawing.Point(211, 19);
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.Size = new System.Drawing.Size(398, 186);
-            this.dgvLista.TabIndex = 1;
+            this.Grilla.Location = new System.Drawing.Point(211, 19);
+            this.Grilla.Name = "Grilla";
+            this.Grilla.Size = new System.Drawing.Size(398, 186);
+            this.Grilla.TabIndex = 1;
             // 
             // Código
             // 
@@ -264,17 +278,6 @@
             this.btnEquilibrar.UseVisualStyleBackColor = true;
             this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(24, 77);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(66, 17);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "In-Orden";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +289,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmArbolBinario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmArbolBinario";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -293,7 +297,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grilla)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,7 +318,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.DataGridView dgvLista;
+        private System.Windows.Forms.DataGridView Grilla;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Trámite;
@@ -322,6 +326,6 @@
         private System.Windows.Forms.RadioButton rbPreOrden;
         private System.Windows.Forms.RadioButton rbInOrden;
         private System.Windows.Forms.Button btnEquilibrar;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbInOrdenDesc;
     }
 }

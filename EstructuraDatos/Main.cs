@@ -52,5 +52,11 @@ namespace EstructuraDatos
             frmListaDoblementeEnlazada listaDoble = new frmListaDoblementeEnlazada();
             listaDoble.Show();
         }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario arbol = new frmArbolBinario();
+            arbol.Show();
+        }
     }
 }

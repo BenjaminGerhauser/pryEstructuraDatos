@@ -19,38 +19,91 @@ namespace EstructuraDatos
         clsArbolBinario Arbol = new clsArbolBinario();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo Nuevo = new clsNodo();
-            Nuevo.Tramite = txtTramite.Text;
-            Nuevo.Nombre = txtNombre.Text;
-            Nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            Arbol.Agregar(Nuevo);
-            Arbol.Recorrer(dgvLista);
-            Arbol.Recorrer(cboCodigo);
-            //Arbol.Recorrer(treeView1);
+            if (txtCodigo.Text != "")
+            {
+                clsNodo Nuevo = new clsNodo();
+                Nuevo.Tramite = txtTramite.Text;
+                Nuevo.Nombre = txtNombre.Text;
+                Nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                Arbol.Agregar(Nuevo);
+                Arbol.Recorrer(Grilla);
+                Arbol.Recorrer(cboCodigo);
+                Arbol.RecorrerPre(treeView1);
+                Arbol.Recorrer();
+            }
+            else MessageBox.Show("Ingrese los datos");
+            txtCodigo.Text = "";
+            txtTramite.Text = "";
+            txtNombre.Text = "";
+            rbInOrden.Checked = true;
+
         }
 
         private void rbInOrden_CheckedChanged(object sender, EventArgs e)
         {
-            Arbol.Recorrer(dgvLista);
+            if (Arbol.Raiz != null)
+            {
+                Arbol.Recorrer(Grilla);
+                Arbol.Recorrer(cboCodigo);
+                Arbol.Recorrer();
+            }   
         }
-
+        private void rbInOrdenDesc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Arbol.Raiz != null)
+            {
+                Arbol.RecorrerDesc(Grilla);
+                Arbol.RecorrerDesc(cboCodigo);
+                Arbol.RecorrerDesc();
+            }
+        }
         private void rbPreOrden_CheckedChanged(object sender, EventArgs e)
         {
-            Arbol.RecorrerPre(dgvLista);
-            Arbol.RecorrerPre(treeView1);
+            if (Arbol.Raiz != null)
+            {
+            Arbol.RecorrerPre(Grilla);
+            Arbol.RecorrerPre(cboCodigo);
+            Arbol.RecorrerPre();
+            }
         }
-
+        private void rbPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Arbol.Raiz != null)
+            {
+                Arbol.RecorrerPost(Grilla);
+                Arbol.RecorrerPost(cboCodigo);
+                Arbol.RecorrerPost();
+            }
+        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Arbol.Eliminar(Convert.ToInt32(cboCodigo.Text));
-            Arbol.Recorrer(dgvLista);
-
+            if (cboCodigo.SelectedIndex != -1)
+            {
+                Arbol.Eliminar(Convert.ToInt32(cboCodigo.Text));
+                if (Arbol.Raiz == null) { cboCodigo.Items.Clear(); Grilla.Rows.Clear(); treeView1.Nodes.Clear(); }
+                else
+                {
+                    
+                    Arbol.Recorrer(Grilla);
+                    Arbol.RecorrerPre(treeView1);
+                    Arbol.Recorrer(cboCodigo);
+                    Arbol.Recorrer();
+                }
+            }
+            txtCodigo.Text = "";
+            txtTramite.Text = "";
+            txtNombre.Text = "";
+            rbInOrden.Checked = true;
         }
-
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
+            
             Arbol.Equilibrar();
-            Arbol.Recorrer(dgvLista);
+            Arbol.Recorrer(Grilla);
+            Arbol.RecorrerPre(treeView1);
+            Arbol.Recorrer(cboCodigo);
+            rbInOrden.Checked = true;
         }
+
     }
 }

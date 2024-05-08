@@ -42,7 +42,6 @@
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cboCodigo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,12 +49,13 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rbDescendente = new System.Windows.Forms.RadioButton();
             this.rbAscendente = new System.Windows.Forms.RadioButton();
+            this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -178,14 +178,6 @@
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 3;
             // 
-            // pictureBoxImagen
-            // 
-            this.pictureBoxImagen.Location = new System.Drawing.Point(12, 12);
-            this.pictureBoxImagen.Name = "pictureBoxImagen";
-            this.pictureBoxImagen.Size = new System.Drawing.Size(191, 181);
-            this.pictureBoxImagen.TabIndex = 8;
-            this.pictureBoxImagen.TabStop = false;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cboCodigo);
@@ -244,7 +236,6 @@
             this.rbDescendente.Name = "rbDescendente";
             this.rbDescendente.Size = new System.Drawing.Size(89, 17);
             this.rbDescendente.TabIndex = 1;
-            this.rbDescendente.TabStop = true;
             this.rbDescendente.Text = "Descendente";
             this.rbDescendente.UseVisualStyleBackColor = true;
             this.rbDescendente.CheckedChanged += new System.EventHandler(this.rbDescendente_CheckedChanged);
@@ -252,6 +243,7 @@
             // rbAscendente
             // 
             this.rbAscendente.AutoSize = true;
+            this.rbAscendente.Checked = true;
             this.rbAscendente.Location = new System.Drawing.Point(9, 16);
             this.rbAscendente.Name = "rbAscendente";
             this.rbAscendente.Size = new System.Drawing.Size(82, 17);
@@ -260,6 +252,16 @@
             this.rbAscendente.Text = "Ascendente";
             this.rbAscendente.UseVisualStyleBackColor = true;
             this.rbAscendente.CheckedChanged += new System.EventHandler(this.rbAscendente_CheckedChanged);
+            // 
+            // pictureBoxImagen
+            // 
+            this.pictureBoxImagen.Image = global::EstructuraDatos.Properties.Resources.doble;
+            this.pictureBoxImagen.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxImagen.Name = "pictureBoxImagen";
+            this.pictureBoxImagen.Size = new System.Drawing.Size(191, 181);
+            this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImagen.TabIndex = 8;
+            this.pictureBoxImagen.TabStop = false;
             // 
             // frmListaDoblementeEnlazada
             // 
@@ -278,11 +280,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
             this.ResumeLayout(false);
 
         }

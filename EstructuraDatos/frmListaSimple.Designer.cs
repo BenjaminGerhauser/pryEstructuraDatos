@@ -217,9 +217,11 @@
             // 
             // pictureBoxImagen
             // 
+            this.pictureBoxImagen.Image = global::EstructuraDatos.Properties.Resources.simple;
             this.pictureBoxImagen.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxImagen.Name = "pictureBoxImagen";
             this.pictureBoxImagen.Size = new System.Drawing.Size(191, 181);
+            this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxImagen.TabIndex = 8;
             this.pictureBoxImagen.TabStop = false;
             // 

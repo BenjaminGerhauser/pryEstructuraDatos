@@ -257,9 +257,11 @@
             // 
             // pictureBoxImagen
             // 
+            this.pictureBoxImagen.Image = global::EstructuraDatos.Properties.Resources._1200px_Pila_svg;
             this.pictureBoxImagen.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxImagen.Name = "pictureBoxImagen";
             this.pictureBoxImagen.Size = new System.Drawing.Size(191, 181);
+            this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImagen.TabIndex = 4;
             this.pictureBoxImagen.TabStop = false;
             // 

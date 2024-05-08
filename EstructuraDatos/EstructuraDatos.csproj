@@ -125,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,6 +139,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Pila.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cola.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

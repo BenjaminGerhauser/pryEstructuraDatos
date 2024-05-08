@@ -23,13 +23,18 @@ namespace EstructuraDatos
             clsNodo ObjNodo = new clsNodo();
             if (txtCodigo.Text != "")
             {
-                ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-                ObjNodo.Nombre = txtNombre.Text;
-                ObjNodo.Tramite = txtTramite.Text;
-                filaDePersonas.Agregar(ObjNodo);
-                filaDePersonas.Recorrer(dgvCola);
-                filaDePersonas.Recorrer(lstCola);
-                filaDePersonas.Recorrer();
+                try 
+                {
+                    ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                    ObjNodo.Nombre = txtNombre.Text;
+                    ObjNodo.Tramite = txtTramite.Text;
+                    filaDePersonas.Agregar(ObjNodo);
+                    filaDePersonas.Recorrer(dgvCola);
+                    filaDePersonas.Recorrer(lstCola);
+                    filaDePersonas.Recorrer();
+                }
+                catch (Exception) { MessageBox.Show("Ingrese un numero"); }
+                //ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
                 txtTramite.Text = "";

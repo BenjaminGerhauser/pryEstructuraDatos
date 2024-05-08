@@ -23,14 +23,19 @@ namespace EstructuraDatos
             if (txtCodigo.Text != "")
             {
                 clsNodo ObjNodo = new clsNodo();
-                ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-                ObjNodo.Nombre = txtNombre.Text;
-                ObjNodo.Tramite = txtTramite.Text;
-                filaDePersonas.Agregar(ObjNodo);
-                filaDePersonas.Recorrer(dgvLista);
-                filaDePersonas.Recorrer(lstLista);
-                filaDePersonas.Recorrer(cboCodigo);
-                filaDePersonas.Recorrer();
+                try 
+                { 
+                    ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text); 
+                    ObjNodo.Nombre = txtNombre.Text;
+                    ObjNodo.Tramite = txtTramite.Text;
+                    filaDePersonas.Agregar(ObjNodo);
+                    filaDePersonas.Recorrer(dgvLista);
+                    filaDePersonas.Recorrer(lstLista);
+                    filaDePersonas.Recorrer(cboCodigo);
+                    filaDePersonas.Recorrer();
+                }
+                catch (Exception) { MessageBox.Show("Ingrese un numero"); }
+                //ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
                 txtTramite.Text = "";
@@ -40,7 +45,7 @@ namespace EstructuraDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (filaDePersonas.Primero != null)
+            if (filaDePersonas.Primero != null && cboCodigo.SelectedIndex != -1)
             {
                 Int32 x = Convert.ToInt32(cboCodigo.Text);
                 filaDePersonas.Eliminar(x);

@@ -23,14 +23,19 @@ namespace EstructuraDatos
             if (txtCodigo.Text != "")
             {
                 clsNodo ObjNodo = new clsNodo();
-                ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-                ObjNodo.Nombre = txtNombre.Text;
-                ObjNodo.Tramite = txtTramite.Text;
-                filaDePersonas.Agregar(ObjNodo);
-                filaDePersonas.RecorrerAsc(dgvLista);
-                filaDePersonas.RecorrerAsc(lstLista);
-                filaDePersonas.RecorrerAsc(cboCodigo);
-                filaDePersonas.RecorrerAsc();
+                try 
+                {
+                    ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text); 
+                    ObjNodo.Nombre = txtNombre.Text;
+                    ObjNodo.Tramite = txtTramite.Text;
+                    filaDePersonas.Agregar(ObjNodo);
+                    filaDePersonas.RecorrerAsc(dgvLista);
+                    filaDePersonas.RecorrerAsc(lstLista);
+                    filaDePersonas.RecorrerAsc(cboCodigo);
+                    filaDePersonas.RecorrerAsc();
+                }
+                catch (Exception) { MessageBox.Show("Ingrese un numero"); }
+                //ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
                 txtTramite.Text = "";
@@ -49,6 +54,7 @@ namespace EstructuraDatos
                 filaDePersonas.RecorrerAsc(lstLista);
                 filaDePersonas.RecorrerAsc(cboCodigo);
                 filaDePersonas.RecorrerAsc();
+                rbAscendente.Checked = true;
             }
         }
 

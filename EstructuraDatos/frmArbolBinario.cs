@@ -22,14 +22,19 @@ namespace EstructuraDatos
             if (txtCodigo.Text != "")
             {
                 clsNodo Nuevo = new clsNodo();
+                try 
+                { 
+                    Nuevo.Codigo = Convert.ToInt32(txtCodigo.Text); 
+                    Arbol.Agregar(Nuevo);
+                    Arbol.Recorrer(Grilla);
+                    Arbol.Recorrer(cboCodigo);
+                    Arbol.RecorrerPre(treeView1);
+                    Arbol.Recorrer();
+                }
+                catch (Exception) { MessageBox.Show("Ingrese un numero"); }
                 Nuevo.Tramite = txtTramite.Text;
                 Nuevo.Nombre = txtNombre.Text;
-                Nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
-                Arbol.Agregar(Nuevo);
-                Arbol.Recorrer(Grilla);
-                Arbol.Recorrer(cboCodigo);
-                Arbol.RecorrerPre(treeView1);
-                Arbol.Recorrer();
+                //Nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
             }
             else MessageBox.Show("Ingrese los datos");
             txtCodigo.Text = "";
@@ -61,9 +66,9 @@ namespace EstructuraDatos
         {
             if (Arbol.Raiz != null)
             {
-            Arbol.RecorrerPre(Grilla);
-            Arbol.RecorrerPre(cboCodigo);
-            Arbol.RecorrerPre();
+                Arbol.RecorrerPre(Grilla);
+                Arbol.RecorrerPre(cboCodigo);
+                Arbol.RecorrerPre();
             }
         }
         private void rbPostOrden_CheckedChanged(object sender, EventArgs e)

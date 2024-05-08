@@ -51,17 +51,17 @@ namespace EstructuraDatos
                     Padre.Derecho = Nuevo;
                 }
             }
-        } 
+        }
         public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
-            InOrdenAsc(Grilla,Raiz);
+            InOrdenAsc(Grilla, Raiz);
         }
-        private void InOrdenAsc(DataGridView Grilla,clsNodo R)
+        private void InOrdenAsc(DataGridView Grilla, clsNodo R)
         {
-            if (R.Izquierdo != null) InOrdenAsc(Grilla,R.Izquierdo);
-            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite); 
-            if (R.Derecho != null) InOrdenAsc(Grilla,R.Derecho);
+            if (R.Izquierdo != null) InOrdenAsc(Grilla, R.Izquierdo);
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Derecho != null) InOrdenAsc(Grilla, R.Derecho);
         }
         public void Recorrer(ListBox Lista)
         {
@@ -85,15 +85,37 @@ namespace EstructuraDatos
             Combo.Items.Add(R.Codigo);
             if (R.Derecho != null) InOrdenAsc(Combo, R.Derecho);
         }
+        public void RecorrerDesc(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            InOrdenDesc(Grilla, Raiz);
+        }
+        private void InOrdenDesc(DataGridView Grilla, clsNodo R)
+        {
+            if (R.Derecho != null) InOrdenDesc(Grilla, R.Derecho);
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierdo != null) InOrdenDesc(Grilla, R.Izquierdo);
+        }
+        public void RecorrerDesc(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            InOrdenDesc(Combo, Raiz);
+        }
+        private void InOrdenDesc(ComboBox Combo, clsNodo R)
+        {
+            if (R.Derecho != null) InOrdenDesc(Combo, R.Derecho);
+            Combo.Items.Add(R.Codigo);
+            if (R.Izquierdo != null) InOrdenDesc(Combo, R.Izquierdo);
+        }
         public void RecorrerPre(TreeView Tree)
         {
             Tree.Nodes.Clear();
             TreeNode NodoPadre = new TreeNode("Árbol");
             Tree.Nodes.Add(NodoPadre);
-            PreOrden(Raiz,NodoPadre);
+            PreOrden(Raiz, NodoPadre);
             Tree.ExpandAll();
         }
-        private void PreOrden(clsNodo R,TreeNode nodoTreeView)
+        private void PreOrden(clsNodo R, TreeNode nodoTreeView)
         {
             TreeNode nodoPadre = new TreeNode(R.Codigo.ToString());
             nodoTreeView.Nodes.Add(nodoPadre);
@@ -103,13 +125,39 @@ namespace EstructuraDatos
         public void RecorrerPre(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
-            PreOrden(Raiz,Grilla);
+            PreOrden(Raiz, Grilla);
         }
         private void PreOrden(clsNodo R, DataGridView Grilla)
         {
-            Grilla.Rows.Add(R.Codigo,R.Nombre,R.Tramite);
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
             if (R.Izquierdo != null) PreOrden(R.Izquierdo, Grilla);
             if (R.Derecho != null) PreOrden(R.Derecho, Grilla);
+        }
+        public void RecorrerPost(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Raiz, Grilla);
+        }
+        private void PostOrden(clsNodo R, DataGridView Grilla)
+        {
+            if (R.Izquierdo != null) PostOrden(R.Izquierdo, Grilla);
+            if (R.Derecho != null) PostOrden(R.Derecho, Grilla);
+            Grilla.Rows.Add(R.Codigo,R.Nombre,R.Tramite);
+        }
+        public void RecorrerPost(TreeView Tree)
+        {
+            Tree.Nodes.Clear();
+            TreeNode NodoPadre = new TreeNode("Árbol");
+            Tree.Nodes.Add(NodoPadre);
+            PostOrden(Raiz, NodoPadre);
+            Tree.ExpandAll();
+        }
+        private void PostOrden(clsNodo R,TreeNode nodoTreeView)
+        {
+            TreeNode nodoPadre = new TreeNode(R.Codigo.ToString());
+            nodoTreeView.Nodes.Add(nodoPadre);
+            if (R.Izquierdo != null) PostOrden(R.Izquierdo, nodoPadre);
+            if (R.Derecho != null) PostOrden(R.Derecho, nodoPadre);
         }
         public clsNodo BuscarCodigo(Int32 cod)
         {

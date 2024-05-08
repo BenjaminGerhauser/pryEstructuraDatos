@@ -50,6 +50,7 @@
             this.Trámite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.btnEquilibrar = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -172,6 +173,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.rbPostOrden);
             this.groupBox2.Controls.Add(this.rbPreOrden);
             this.groupBox2.Controls.Add(this.rbInOrden);
@@ -186,7 +188,7 @@
             // rbPostOrden
             // 
             this.rbPostOrden.AutoSize = true;
-            this.rbPostOrden.Location = new System.Drawing.Point(27, 151);
+            this.rbPostOrden.Location = new System.Drawing.Point(24, 178);
             this.rbPostOrden.Name = "rbPostOrden";
             this.rbPostOrden.Size = new System.Drawing.Size(78, 17);
             this.rbPostOrden.TabIndex = 4;
@@ -197,7 +199,7 @@
             // rbPreOrden
             // 
             this.rbPreOrden.AutoSize = true;
-            this.rbPreOrden.Location = new System.Drawing.Point(27, 104);
+            this.rbPreOrden.Location = new System.Drawing.Point(24, 122);
             this.rbPreOrden.Name = "rbPreOrden";
             this.rbPreOrden.Size = new System.Drawing.Size(73, 17);
             this.rbPreOrden.TabIndex = 3;
@@ -209,7 +211,7 @@
             // rbInOrden
             // 
             this.rbInOrden.AutoSize = true;
-            this.rbInOrden.Location = new System.Drawing.Point(27, 54);
+            this.rbInOrden.Location = new System.Drawing.Point(24, 33);
             this.rbInOrden.Name = "rbInOrden";
             this.rbInOrden.Size = new System.Drawing.Size(66, 17);
             this.rbInOrden.TabIndex = 2;
@@ -262,6 +264,17 @@
             this.btnEquilibrar.UseVisualStyleBackColor = true;
             this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(24, 77);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(66, 17);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "In-Orden";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,5 +322,6 @@
         private System.Windows.Forms.RadioButton rbPreOrden;
         private System.Windows.Forms.RadioButton rbInOrden;
         private System.Windows.Forms.Button btnEquilibrar;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

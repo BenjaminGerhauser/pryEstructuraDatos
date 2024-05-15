@@ -58,5 +58,23 @@ namespace EstructuraDatos
             frmArbolBinario arbol = new frmArbolBinario();
             arbol.Show();
         }
+
+        private void operacionesConTablasDeDeBasesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosOperaciones operaciones = new frmBaseDatosOperaciones();
+            operaciones.ShowDialog();
+        }
+
+        private void consultaEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosConsulta consulta = new frmBaseDatosConsulta();
+            consulta.ShowDialog();
+        }
+
+        private void repasoDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosRepasoOperaciones repaso = new frmBaseDatosRepasoOperaciones();
+            repaso.ShowDialog();
+        }
     }
 }

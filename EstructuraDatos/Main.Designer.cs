@@ -40,6 +40,9 @@
             this.estructurasNoLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basoDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operacionesConTablasDeDeBasesDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaEnLaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.repasoDeOperacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,9 +138,34 @@
             // 
             // basoDeDatosToolStripMenuItem
             // 
+            this.basoDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.operacionesConTablasDeDeBasesDeDatosToolStripMenuItem,
+            this.consultaEnLaBaseDeDatosToolStripMenuItem,
+            this.repasoDeOperacionesToolStripMenuItem});
             this.basoDeDatosToolStripMenuItem.Name = "basoDeDatosToolStripMenuItem";
             this.basoDeDatosToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.basoDeDatosToolStripMenuItem.Text = "Baso de datos";
+            // 
+            // operacionesConTablasDeDeBasesDeDatosToolStripMenuItem
+            // 
+            this.operacionesConTablasDeDeBasesDeDatosToolStripMenuItem.Name = "operacionesConTablasDeDeBasesDeDatosToolStripMenuItem";
+            this.operacionesConTablasDeDeBasesDeDatosToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
+            this.operacionesConTablasDeDeBasesDeDatosToolStripMenuItem.Text = "Operaciones con tablas de de bases de datos";
+            this.operacionesConTablasDeDeBasesDeDatosToolStripMenuItem.Click += new System.EventHandler(this.operacionesConTablasDeDeBasesDeDatosToolStripMenuItem_Click);
+            // 
+            // consultaEnLaBaseDeDatosToolStripMenuItem
+            // 
+            this.consultaEnLaBaseDeDatosToolStripMenuItem.Name = "consultaEnLaBaseDeDatosToolStripMenuItem";
+            this.consultaEnLaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
+            this.consultaEnLaBaseDeDatosToolStripMenuItem.Text = "Consulta en la base de datos";
+            this.consultaEnLaBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.consultaEnLaBaseDeDatosToolStripMenuItem_Click);
+            // 
+            // repasoDeOperacionesToolStripMenuItem
+            // 
+            this.repasoDeOperacionesToolStripMenuItem.Name = "repasoDeOperacionesToolStripMenuItem";
+            this.repasoDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
+            this.repasoDeOperacionesToolStripMenuItem.Text = "Repaso de Operaciones";
+            this.repasoDeOperacionesToolStripMenuItem.Click += new System.EventHandler(this.repasoDeOperacionesToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -173,5 +201,8 @@
         private System.Windows.Forms.ToolStripMenuItem estructurasNoLinealesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arbolBinarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem basoDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem operacionesConTablasDeDeBasesDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaEnLaBaseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem repasoDeOperacionesToolStripMenuItem;
     }
 }

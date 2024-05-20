@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSeleccionConvolucion = new System.Windows.Forms.Button();
+            this.btnSeleccionMultiatributo = new System.Windows.Forms.Button();
+            this.btnSeleccionSimple = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnDiferencia = new System.Windows.Forms.Button();
+            this.btnInterseccion = new System.Windows.Forms.Button();
+            this.btnUnion = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnJuntar = new System.Windows.Forms.Button();
+            this.btnProyeccionMultiatributo = new System.Windows.Forms.Button();
+            this.btnProyeccionSimple = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -49,9 +49,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.btnSeleccionConvolucion);
+            this.groupBox2.Controls.Add(this.btnSeleccionMultiatributo);
+            this.groupBox2.Controls.Add(this.btnSeleccionSimple);
             this.groupBox2.Location = new System.Drawing.Point(276, 304);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(260, 109);
@@ -59,11 +59,41 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Operaciones de Seleccion - WHERE";
             // 
+            // btnSeleccionConvolucion
+            // 
+            this.btnSeleccionConvolucion.Location = new System.Drawing.Point(6, 77);
+            this.btnSeleccionConvolucion.Name = "btnSeleccionConvolucion";
+            this.btnSeleccionConvolucion.Size = new System.Drawing.Size(248, 23);
+            this.btnSeleccionConvolucion.TabIndex = 12;
+            this.btnSeleccionConvolucion.Text = "Seleccion por convolucion";
+            this.btnSeleccionConvolucion.UseVisualStyleBackColor = true;
+            this.btnSeleccionConvolucion.Click += new System.EventHandler(this.btnSeleccionConvolucion_Click);
+            // 
+            // btnSeleccionMultiatributo
+            // 
+            this.btnSeleccionMultiatributo.Location = new System.Drawing.Point(6, 47);
+            this.btnSeleccionMultiatributo.Name = "btnSeleccionMultiatributo";
+            this.btnSeleccionMultiatributo.Size = new System.Drawing.Size(248, 23);
+            this.btnSeleccionMultiatributo.TabIndex = 11;
+            this.btnSeleccionMultiatributo.Text = "Seleccion multiatributo";
+            this.btnSeleccionMultiatributo.UseVisualStyleBackColor = true;
+            this.btnSeleccionMultiatributo.Click += new System.EventHandler(this.btnSeleccionMultiatributo_Click);
+            // 
+            // btnSeleccionSimple
+            // 
+            this.btnSeleccionSimple.Location = new System.Drawing.Point(6, 18);
+            this.btnSeleccionSimple.Name = "btnSeleccionSimple";
+            this.btnSeleccionSimple.Size = new System.Drawing.Size(248, 23);
+            this.btnSeleccionSimple.TabIndex = 10;
+            this.btnSeleccionSimple.Text = "Seleccion Simple";
+            this.btnSeleccionSimple.UseVisualStyleBackColor = true;
+            this.btnSeleccionSimple.Click += new System.EventHandler(this.btnSeleccionSimple_Click);
+            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.btnDiferencia);
+            this.groupBox3.Controls.Add(this.btnInterseccion);
+            this.groupBox3.Controls.Add(this.btnUnion);
             this.groupBox3.Location = new System.Drawing.Point(542, 304);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(246, 109);
@@ -71,17 +101,77 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Operaciones Algebraicas";
             // 
+            // btnDiferencia
+            // 
+            this.btnDiferencia.Location = new System.Drawing.Point(6, 77);
+            this.btnDiferencia.Name = "btnDiferencia";
+            this.btnDiferencia.Size = new System.Drawing.Size(234, 23);
+            this.btnDiferencia.TabIndex = 13;
+            this.btnDiferencia.Text = "Diferencia";
+            this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
+            // 
+            // btnInterseccion
+            // 
+            this.btnInterseccion.Location = new System.Drawing.Point(6, 51);
+            this.btnInterseccion.Name = "btnInterseccion";
+            this.btnInterseccion.Size = new System.Drawing.Size(234, 23);
+            this.btnInterseccion.TabIndex = 12;
+            this.btnInterseccion.Text = "Interseccion";
+            this.btnInterseccion.UseVisualStyleBackColor = true;
+            this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
+            // 
+            // btnUnion
+            // 
+            this.btnUnion.Location = new System.Drawing.Point(6, 22);
+            this.btnUnion.Name = "btnUnion";
+            this.btnUnion.Size = new System.Drawing.Size(234, 23);
+            this.btnUnion.TabIndex = 11;
+            this.btnUnion.Text = "Union";
+            this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnJuntar);
+            this.groupBox1.Controls.Add(this.btnProyeccionMultiatributo);
+            this.groupBox1.Controls.Add(this.btnProyeccionSimple);
             this.groupBox1.Location = new System.Drawing.Point(12, 304);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(258, 109);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operaciones de Proyeccion - SELECT";
+            // 
+            // btnJuntar
+            // 
+            this.btnJuntar.Location = new System.Drawing.Point(6, 77);
+            this.btnJuntar.Name = "btnJuntar";
+            this.btnJuntar.Size = new System.Drawing.Size(246, 23);
+            this.btnJuntar.TabIndex = 9;
+            this.btnJuntar.Text = "Juntar";
+            this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
+            // 
+            // btnProyeccionMultiatributo
+            // 
+            this.btnProyeccionMultiatributo.Location = new System.Drawing.Point(6, 48);
+            this.btnProyeccionMultiatributo.Name = "btnProyeccionMultiatributo";
+            this.btnProyeccionMultiatributo.Size = new System.Drawing.Size(246, 23);
+            this.btnProyeccionMultiatributo.TabIndex = 8;
+            this.btnProyeccionMultiatributo.Text = "Proyeccion multiatributo";
+            this.btnProyeccionMultiatributo.UseVisualStyleBackColor = true;
+            this.btnProyeccionMultiatributo.Click += new System.EventHandler(this.btnProyeccionMultiatributo_Click);
+            // 
+            // btnProyeccionSimple
+            // 
+            this.btnProyeccionSimple.Location = new System.Drawing.Point(6, 19);
+            this.btnProyeccionSimple.Name = "btnProyeccionSimple";
+            this.btnProyeccionSimple.Size = new System.Drawing.Size(246, 23);
+            this.btnProyeccionSimple.TabIndex = 7;
+            this.btnProyeccionSimple.Text = "Proyeccion Simple";
+            this.btnProyeccionSimple.UseVisualStyleBackColor = true;
+            this.btnProyeccionSimple.Click += new System.EventHandler(this.btnProyeccionSimple_Click);
             // 
             // dataGridView1
             // 
@@ -91,87 +181,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 275);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Proyeccion Simple";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(6, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(246, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Proyeccion multiatributo";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(246, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Juntar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(248, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Seleccion Simple";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(6, 47);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(248, 23);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Seleccion multiatributo";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(6, 77);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(248, 23);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Seleccion por convolucion";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(6, 22);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(234, 23);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Union";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(6, 51);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(234, 23);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "Interseccion";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(6, 77);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(234, 23);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "Diferencia";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // frmBaseDatosOperaciones
             // 
@@ -198,14 +207,14 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSeleccionConvolucion;
+        private System.Windows.Forms.Button btnSeleccionMultiatributo;
+        private System.Windows.Forms.Button btnSeleccionSimple;
+        private System.Windows.Forms.Button btnDiferencia;
+        private System.Windows.Forms.Button btnInterseccion;
+        private System.Windows.Forms.Button btnUnion;
+        private System.Windows.Forms.Button btnJuntar;
+        private System.Windows.Forms.Button btnProyeccionMultiatributo;
+        private System.Windows.Forms.Button btnProyeccionSimple;
     }
 }

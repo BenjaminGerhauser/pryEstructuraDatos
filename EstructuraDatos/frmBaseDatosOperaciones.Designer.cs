@@ -192,6 +192,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmBaseDatosOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBaseDatosOperaciones";
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

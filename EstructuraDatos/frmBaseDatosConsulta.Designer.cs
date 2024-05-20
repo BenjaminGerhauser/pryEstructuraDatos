@@ -81,6 +81,7 @@
             this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.label1);
             this.Name = "frmBaseDatosConsulta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBaseDatosConsulta";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

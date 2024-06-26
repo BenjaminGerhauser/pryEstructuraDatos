@@ -47,28 +47,29 @@
             // 
             // cboSQL
             // 
+            this.cboSQL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSQL.FormattingEnabled = true;
             this.cboSQL.Items.AddRange(new object[] {
-            "ProyeccionSimple",
-            "ProyeccionSimple2",
-            "ProyeccionMultiatributo",
-            "ProyeccionMultiatributo2",
+            "Proyeccion Simple",
+            "Proyeccion Simple 2",
+            "Proyeccion Multiatributo",
+            "Proyeccion Multiatributo 2",
             "Juntar",
-            "Juntar2",
-            "SeleccionSimple",
-            "SeleccionSimple2",
-            "SeleccionMultiatributo",
-            "SeleccionMultiatributo2",
-            "SeleccionConvolucion",
-            "SeleccionConvolucion2",
+            "Juntar 2",
+            "Seleccion Simple",
+            "Seleccion Simple 2",
+            "Seleccion Multiatributo",
+            "Seleccion Multiatributo 2",
+            "Seleccion por Convolucion",
+            "Seleccion por Convolucion 2",
             "Union",
-            "Union2",
+            "Union 2",
             "Interseccion",
-            "Interseccion2",
+            "Interseccion 2",
             "Diferencia",
-            "Diferencia2",
-            "ProyeccionSimple3",
-            "ProyeccionSimple4"});
+            "Diferencia 2",
+            "Seleccion Simple 3",
+            "Proyeccion Simple 3"});
             this.cboSQL.Location = new System.Drawing.Point(221, 13);
             this.cboSQL.Name = "cboSQL";
             this.cboSQL.Size = new System.Drawing.Size(370, 21);
@@ -91,22 +92,22 @@
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(15, 60);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(669, 122);
+            this.lblDescripcion.Size = new System.Drawing.Size(669, 191);
             this.lblDescripcion.TabIndex = 3;
             // 
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(15, 214);
+            this.Grilla.Location = new System.Drawing.Point(12, 254);
             this.Grilla.Name = "Grilla";
-            this.Grilla.Size = new System.Drawing.Size(669, 236);
+            this.Grilla.Size = new System.Drawing.Size(672, 257);
             this.Grilla.TabIndex = 4;
             // 
             // frmBaseDatosRepasoOperaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 462);
+            this.ClientSize = new System.Drawing.Size(699, 522);
             this.Controls.Add(this.Grilla);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.btnListar);

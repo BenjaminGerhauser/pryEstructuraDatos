@@ -47,6 +47,7 @@
             // 
             // txtConsulta
             // 
+            this.txtConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsulta.Location = new System.Drawing.Point(15, 28);
             this.txtConsulta.Multiline = true;
             this.txtConsulta.Name = "txtConsulta";
